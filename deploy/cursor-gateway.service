@@ -1,0 +1,24 @@
+[Unit]
+Description=Cursor OpenAI-compatible Python gateway
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# Create this user and make /opt/cursor-gateway/data writable by it.
+User=cursor-gateway
+Group=cursor-gateway
+WorkingDirectory=/opt/cursor-gateway
+EnvironmentFile=-/opt/cursor-gateway/.env
+Environment=CURSOR_DIRECT_AUTH_FILE=/opt/cursor-gateway/data/accounts.json
+ExecStart=/opt/cursor-gateway/.venv/bin/cursor-gateway serve
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/opt/cursor-gateway/data
+TimeoutStopSec=10
+
+[Install]
+WantedBy=multi-user.target

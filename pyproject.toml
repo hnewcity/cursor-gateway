@@ -1,0 +1,99 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cursor-gateway"
+version = "0.1.0"
+description = "Python OpenAI-compatible gateway for Cursor's agent protocol"
+readme = "README.md"
+requires-python = ">=3.14"
+license = "AGPL-3.0-only"
+license-files = ["LICENSE", "NOTICE"]
+keywords = ["cursor", "gateway", "openai", "fastapi"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.14",
+  "Framework :: FastAPI",
+  "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
+]
+dependencies = [
+  "cryptography>=46,<50",
+  "fastapi>=0.135,<1",
+  "h2>=4.3,<5",
+  "jsonschema>=4.25,<5",
+  "protobuf>=7.36.1,<8",
+  "python-dotenv>=1.1,<2",
+  "uvicorn>=0.35,<1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.2",
+  "httpx>=0.28,<1",
+  "openai>=2.54,<3",
+  "pytest>=8.4,<10",
+  "pytest-asyncio>=1.1,<2",
+  "ruff>=0.12",
+]
+
+[project.scripts]
+cursor-gateway = "cursor_gateway.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cursor_gateway"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/src",
+  "/tests",
+  "/scripts/run_codex.py",
+  "/scripts/export_cursor_credentials.py",
+  "/scripts/generate_proto.py",
+  "/docs",
+  "/deploy",
+  "/.github",
+  "/.dockerignore",
+  "/.gitignore",
+  "/.gitleaks.toml",
+  "/.python-version",
+  "/.env.example",
+  "/Dockerfile",
+  "/docker-compose.yml",
+  "/pyproject.toml",
+  "/README.md",
+  "/CONTRIBUTING.md",
+  "/SECURITY.md",
+  "/CODE_OF_CONDUCT.md",
+  "/CHANGELOG.md",
+  "/LICENSE",
+  "/NOTICE",
+]
+exclude = [
+  "**/__pycache__",
+  "**/*.pyc",
+  "**/.DS_Store",
+  "**/accounts*.json",
+  "**/compaction.key*",
+  "**/*.key",
+  "**/*.pem",
+  "**/*.p12",
+  "**/*.pfx",
+  "**/*.log",
+  "**/*.log.*",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py314"
+line-length = 100
+extend-exclude = ["src/cursor_gateway/proto/agent_pb2.py"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "ASYNC"]
+# These public network helpers own and enforce their overall timeout.
+ignore = ["ASYNC109"]

@@ -1,0 +1,40 @@
+name: Bug report / 问题反馈
+description: Report a reproducible problem using sanitized examples.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not paste tokens, account files, private prompts, or raw session logs.
+        For vulnerabilities, follow SECURITY.md instead.
+        请勿粘贴凭据、账号文件、私人提示词或原始会话日志；漏洞请按 SECURITY.md 私密报告。
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit / 版本或提交
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment / 运行环境
+      description: OS, Python version, deployment method, and client version. Do not include account information.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce / 复现步骤
+      description: Use a minimal request with synthetic data.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior / 预期与实际行为
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Sanitized diagnostics / 脱敏诊断
+      description: Relevant error code, request ID, and redacted error message only.

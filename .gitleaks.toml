@@ -1,0 +1,11 @@
+title = "Cursor Gateway secret scanning"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "hardcoded-docker-login-stdin"
+description = "Literal credentials piped into docker login"
+regex = '''(?m)printf[ \t]+['"]%s['"][ \t]+['"]?([^\s'"$]{8,})['"]?[ \t]*\|[ \t\r\n]*docker[ \t]+login'''
+secretGroup = 1
+keywords = ["docker", "login", "printf"]

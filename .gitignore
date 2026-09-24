@@ -1,0 +1,64 @@
+# Python environments and bytecode
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Test, lint, and coverage artifacts
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.hypothesis/
+.tox/
+.nox/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Package build artifacts (keep dependency lockfiles tracked)
+dist/
+build/
+.eggs/
+*.egg-info/
+
+# Local configuration; keep sanitized configuration templates
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Cursor credentials, atomic-write temporary files, and checkpoint keys
+accounts.json
+accounts.json.*
+accounts.*.json
+.accounts.json.*
+!accounts.example.json
+compaction.key
+compaction.key.*
+
+# Project runtime data, live-test reports, and local container state
+/data/
+/.ci-docker/
+/private/
+/.private/
+/local/
+/artifacts/
+*.log
+*.log.*
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+
+# Local editor and operating-system files
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
