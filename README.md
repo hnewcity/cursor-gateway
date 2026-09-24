@@ -4,18 +4,32 @@
 
 **将你的 Cursor 账号接入 OpenAI 兼容 API**
 
-**简体中文** · [English](docs/en/README.md)
+[English](docs/en/README.md) · [Русский](docs/ru/README.md) · **简体中文** · [Español](docs/es/README.md) · [Bahasa Indonesia](docs/id/README.md) · [Português (Brasil)](docs/pt-BR/README.md) · [日本語](docs/ja/README.md) · [한국어](docs/ko/README.md)
 
 用熟悉的客户端，调用 Cursor 账号可用的模型。支持 Chat Completions、Responses API 与 Codex CLI。
 
+[![CI](https://github.com/hnewcity/cursor-gateway/actions/workflows/ci.yml/badge.svg)](https://github.com/hnewcity/cursor-gateway/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/Python-3.14%2B-3776AB?logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
 [![License](https://img.shields.io/badge/License-AGPL--3.0--only-blue)](LICENSE)
 
-[功能特性](#features) · [快速开始](#quick-start) · [账号配置](#accounts) · [Docker 部署](#docker) · [客户端接入](#clients) · [常见问题](#faq)
+[功能特性](#features) · [快速开始](#quick-start) · [账号配置](#accounts) · [Docker 部署](#docker) · [客户端接入](#clients) · [常见问题](#faq) · [赞助](#sponsors)
 
 </div>
+
+---
+
+<a id="sponsors"></a>
+
+## ❤️ 赞助
+
+<table>
+<tr>
+<td width="180" align="center"><a href="https://ai18n.chat"><img src="docs/assets/sponsors/ai18n.png" alt="ai18n" width="150"></a></td>
+<td>感谢 <a href="https://ai18n.chat"><strong>ai18n</strong></a> 对本项目的赞助！ai18n 提供 AI API 中转服务，支持 OpenClaw、Claude Code、Codex、Gemini 等工具。</td>
+</tr>
+</table>
 
 ---
 
@@ -95,6 +109,7 @@ curl http://127.0.0.1:8790/v1/models \
 从当前仓库页面复制克隆地址，或选择 **Code → Download ZIP** 下载并解压。
 
 ```bash
+git clone https://github.com/hnewcity/cursor-gateway.git
 cd cursor-gateway
 
 python3.14 -m venv .venv
@@ -684,7 +699,7 @@ cursor-gateway/
 ## 🤝 参与贡献
 
 使用 Issues 反馈可复现的问题或讨论功能建议，提交 PR 前请阅读 [贡献指南](CONTRIBUTING.md)。
-修改功能、配置或示例时请同步中英文文档，并遵循 [行为准则](CODE_OF_CONDUCT.md)。
+修改功能、配置或示例时请同步八种语言的 README 及中英文指南，并遵循 [行为准则](CODE_OF_CONDUCT.md)。
 安全问题请按 [安全报告流程](SECURITY.md) 私密反馈。版本变化见 [CHANGELOG](CHANGELOG.md)。
 
 <a id="credits"></a>

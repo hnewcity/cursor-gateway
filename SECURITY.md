@@ -2,7 +2,7 @@
 
 ## Reporting a vulnerability
 
-Report vulnerabilities privately through **Security → Report a vulnerability** on the repository, when enabled.
+Report vulnerabilities privately through [**Security → Report a vulnerability**](https://github.com/hnewcity/cursor-gateway/security/advisories/new) on the repository, when enabled.
 If this option is unavailable, open an issue asking the maintainer to enable private reporting or provide a private
 contact channel. Do not include vulnerability details in that public request.
 
@@ -23,7 +23,7 @@ There is no guaranteed response time; the maintainer will coordinate investigati
 
 ## 中文说明
 
-如仓库已启用私密漏洞报告，请使用 **Security → Report a vulnerability**。
+如仓库已启用私密漏洞报告，请使用 [**Security → Report a vulnerability**](https://github.com/hnewcity/cursor-gateway/security/advisories/new)。
 若没有这个入口，可通过普通 Issue 请求维护者启用私密报告或提供私密联系方式，**不要公开漏洞细节**。
 
 报告中提供版本或提交、部署方式、影响范围，以及使用虚构数据的最小复现。

@@ -7,6 +7,6 @@ Describe the problem and resulting behavior.
 List relevant checks and their results.
 
 - [ ] Tests cover behavior changes, or this is documentation-only.
-- [ ] Chinese and English documentation are updated where needed.
+- [ ] The README in all eight languages and the Chinese and English guides are updated where needed.
 - [ ] No credentials, personal data, private endpoints, or local test artifacts are included.
 - [ ] Upstream attribution and licensing are preserved.

@@ -4,18 +4,32 @@
 
 **Connect your Cursor account to an OpenAI-compatible API**
 
-[简体中文](../../README.md) · **English**
+**English** · [Русский](../ru/README.md) · [简体中文](../../README.md) · [Español](../es/README.md) · [Bahasa Indonesia](../id/README.md) · [Português (Brasil)](../pt-BR/README.md) · [日本語](../ja/README.md) · [한국어](../ko/README.md)
 
 Use familiar clients with the models available to your Cursor account. Supports Chat Completions, the Responses API, and Codex CLI.
 
+[![CI](https://github.com/hnewcity/cursor-gateway/actions/workflows/ci.yml/badge.svg)](https://github.com/hnewcity/cursor-gateway/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/Python-3.14%2B-3776AB?logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
 [![License](https://img.shields.io/badge/License-AGPL--3.0--only-blue)](../../LICENSE)
 
-[Features](#features) · [Quick Start](#quick-start) · [Accounts](#accounts) · [Docker](#docker) · [Client Setup](#clients) · [Troubleshooting](#faq)
+[Features](#features) · [Quick Start](#quick-start) · [Accounts](#accounts) · [Docker](#docker) · [Client Setup](#clients) · [Troubleshooting](#faq) · [Sponsor](#sponsors)
 
 </div>
+
+---
+
+<a id="sponsors"></a>
+
+## ❤️ Sponsor
+
+<table>
+<tr>
+<td width="180" align="center"><a href="https://ai18n.chat"><img src="../assets/sponsors/ai18n.png" alt="ai18n" width="150"></a></td>
+<td>Thanks to <a href="https://ai18n.chat"><strong>ai18n</strong></a> for sponsoring this project! ai18n provides AI API relay services for tools such as OpenClaw, Claude Code, Codex, and Gemini.</td>
+</tr>
+</table>
 
 ---
 
@@ -95,6 +109,7 @@ Choose **native Python** for development and debugging, or **[Docker Compose](#d
 Clone using the URL on this repository page, or choose **Code → Download ZIP** and extract the archive.
 
 ```bash
+git clone https://github.com/hnewcity/cursor-gateway.git
 cd cursor-gateway
 
 python3.14 -m venv .venv
@@ -684,7 +699,7 @@ cursor-gateway/
 ## 🤝 Contributing
 
 Use Issues for reproducible bugs and feature discussions, and read the [contributing guide](../../CONTRIBUTING.md) before submitting a pull request.
-Keep Chinese and English documentation in sync when changing behavior, configuration, or examples, and follow the [code of conduct](../../CODE_OF_CONDUCT.md).
+Keep the README in all eight languages and the Chinese and English guides in sync when changing behavior, configuration, or examples, and follow the [code of conduct](../../CODE_OF_CONDUCT.md).
 Report vulnerabilities privately using the [security policy](../../SECURITY.md). See the [changelog](../../CHANGELOG.md) for version changes.
 
 <a id="credits"></a>

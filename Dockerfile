@@ -21,7 +21,7 @@ RUN ruff check src scripts tests \
 
 FROM source AS runtime
 ARG VCS_REF=unknown
-ARG SOURCE_URL=""
+ARG SOURCE_URL="https://github.com/hnewcity/cursor-gateway"
 LABEL org.opencontainers.image.title="Cursor Gateway" \
     org.opencontainers.image.description="Python FastAPI gateway for Cursor with OpenAI-compatible APIs" \
     org.opencontainers.image.source="${SOURCE_URL}" \

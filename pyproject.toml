@@ -41,6 +41,11 @@ dev = [
 [project.scripts]
 cursor-gateway = "cursor_gateway.cli:main"
 
+[project.urls]
+Repository = "https://github.com/hnewcity/cursor-gateway"
+Issues = "https://github.com/hnewcity/cursor-gateway/issues"
+Changelog = "https://github.com/hnewcity/cursor-gateway/blob/main/CHANGELOG.md"
+
 [tool.hatch.build.targets.wheel]
 packages = ["src/cursor_gateway"]
 

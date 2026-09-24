@@ -7,4 +7,5 @@
 - Account rotation, token refresh, SOCKS5 proxy support, and request diagnostics.
 - A Codex CLI launcher and standalone local credential export utility.
 - Docker Compose deployment, Python packaging, and automated tests using a local mock upstream.
-- Chinese and English documentation.
+- README in English, Russian, Simplified Chinese, Spanish, Indonesian, Brazilian Portuguese, Japanese, and Korean.
+- API reference and Codex CLI guides in Chinese and English.
